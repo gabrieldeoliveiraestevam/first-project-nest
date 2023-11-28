@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Criação de tabela no primas
+model TeamMember {
+  id       Int @id @default(autoincrement())
+  name     String
+  function String
+}
